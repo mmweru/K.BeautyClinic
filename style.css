@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url("Images/roses.png"); /* Replace with your rose image */
+    background-size: cover;
+    background-position: center;
+    background-size: 200%;
+    background-attachment: fixed;
+    font-family: 'Playfair Display', serif; /* Use the Playfair Display font */
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(210, 105, 30, 0.4); /* Cocoa brown color with opacity */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+nav ul li a {
+    color: #fff; /* Cocoa brown text for contrast */
+    text-decoration: none;
+    font-size: 1.2em; /* Adjust the font size as needed */
+    transition: color 0.3s ease, font-size 0.3s ease; /* Smooth color and font size transition */
+}
+
+nav ul li a:hover {
+    color: #f309e3; /* Cocoa brown text for contrast */
+    font-size: 1em; /* Reduce the font size when hovered */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: rgba(210, 105, 30, 0.4); /* Cocoa brown color with opacity */
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    nav ul li a {
+        font-size: 2em; /* Increase the font size for smaller screens */
+    }
+
+    nav ul.show {
+        transform: translateX(0);
+    }
+   
+}
+
+
+.logo {
+    width: 200px; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 10px; 
+    transition: transform 0.3s ease;
+}
+.logo:hover {
+    transform: scale(1.6); /* Scale the logo up to 110% when hovered */
+}
+
+.glass-panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background-color: rgba(210, 105, 30, 0.4); /* Cocoa brown color with opacity */
+    border-radius: 20px;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    display: flex;
+}
+
+.content {
+    width: 50%; /* Occupy the left half */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass-image {
+    flex: 1;
+    background-image: url("Images/roses.png"); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+}
+
+
+.cool-text {
+    color: #fff; /* White text for contrast */
+    text-align: center;
+    padding: 20px;
+    font-size: 2.5em; /* Adjust the font size as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for a cool effect */
+    letter-spacing: 2px; /* Adjust letter spacing for style */
+    position: relative;
+    z-index: 1;
+    width: 200%; /* Make the text cross over to the other half */
+    -webkit-text-stroke: 2px transparent; /* Outline the text */
+}
+
+.glass-panel h1,
+.glass-panel p {
+    color: #fff; /* White text for contrast */
+    text-align: center;
+    padding: 20px;
+}
+
+.type-writer {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white; /* The typewriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+    animation-fill-mode: forwards;
+    line-height: 0.2;
+    width: 800%; /* Make the text cross over to the other half */
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100%; border-right: none; }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
+
+/* ... existing styles ... */
+
+/* Responsive glassmorphism */
+@media (max-width: 768px) {
+    .glass-panel {
+      backdrop-filter: blur(20px); /* reduced blur on smaller screens */
+      background-color: rgba(210, 105, 30, 0.5); /* slightly more opaque */
+    }
+  }
+  
+  /* Responsive font sizes and line heights */
+
+ 
+  @media (max-width: 768px) {
+    .content {
+    align-items: center;
+      line-height: 0.2;
+    }
+    .cool-text {
+      font-size: larger;
+      margin-left: 68%;
+    }
+    .glass-panel h1,
+    .glass-panel p {
+    align-items: center;
+    }
+    .type-writer {
+        width: 80%;
+        margin-left: 20%;
+        font-size: small;
+    }
+    .logo {
+        margin-left: 70%;
+    }
+  }
+  
+  /* Responsive layout adjustments */
+  @media (max-width: 768px) {
+    .glass-panel {
+      flex-direction: row;
+    }
+    .glass-image {
+      display: none; /* hide image on smaller screens */
+    }
+  }
+  
+  /* Navigation menu adaptation (requires additional code) */
+  /* ... replace with menu adjustments for smaller screens ... */
+  
