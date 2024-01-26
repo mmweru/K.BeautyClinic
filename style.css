@@ -607,3 +607,9 @@ ul {
     margin-right: 5px;
     vertical-align: middle;
 }
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e1e1e; /* Dark background color */
+        color: #ffffff; /* Light text color */
+    }
+}
