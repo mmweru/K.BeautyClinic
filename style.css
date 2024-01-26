@@ -1,16 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
-body {
+* {
     margin: 0;
-    height: 100vh;
-    background-image: url("Images/roses.png"); /* Replace with your rose image */
-    background-size: cover;
-    background-position: center;
-    background-size: 200%;
-    background-attachment: fixed;
+    padding: 0;    
     font-family: 'Playfair Display', serif; /* Use the Playfair Display font */
 }
-
+.header{
+    height: 100vh; 
+    min-height: 100vh;
+    width: 100%;
+    background-size: 200%;
+    background-image: url("Images/roses.png"); 
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    background-position: center;
+}
 nav {
     position: fixed;
     top: 0;
@@ -24,6 +29,28 @@ nav {
     justify-content: center;
     align-items: center;
     z-index: 1000;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+.hamburger-menu div {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: #fff; /* White color */
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
 }
 
 nav ul {
@@ -50,25 +77,31 @@ nav ul li a:hover {
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
+        flex-direction:column;
         height: 100vh;
-        width: 100%;
+        width: 50%;
         position: absolute;
+        display:-moz-grid-line;
         top: 50px;
+        right: 0;
         left: 0;
-        background-color: rgba(210, 105, 30, 0.4); /* Cocoa brown color with opacity */
+        background-image: url("Images/roses.png"); /* Replace with your rose image */
+        background-size: cover;
+        background-position: center;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         transform: translateX(-100%);
-        transition: transform 0.3s ease;
     }
 
     nav ul li a {
-        font-size: 2em; /* Increase the font size for smaller screens */
+        font-size: 1.3em; /* Decrease the font size for smaller screens */
     }
 
     nav ul.show {
         transform: translateX(0);
+    }
+    .hamburger-menu {
+        display: flex;
     }
    
 }
@@ -183,7 +216,7 @@ nav ul li a:hover {
       line-height: 0.2;
     }
     .cool-text {
-      font-size: larger;
+      font-size: 1.5em;
       margin-left: 68%;
     }
     .glass-panel h1,
@@ -191,9 +224,9 @@ nav ul li a:hover {
     align-items: center;
     }
     .type-writer {
-        width: 80%;
-        margin-left: 20%;
-        font-size: small;
+        margin-left: 25%;
+        font-size: 0.6em;
+        
     }
     .logo {
         margin-left: 70%;
@@ -209,7 +242,404 @@ nav ul li a:hover {
       display: none; /* hide image on smaller screens */
     }
   }
+ /*--------about page ---------*/ 
+ .about{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    background-size: 200%;
+    background-image: url("Images/tulips.png"); /* Replace with your rose image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.about {
+    /* ... your existing styles ... */
   
-  /* Navigation menu adaptation (requires additional code) */
-  /* ... replace with menu adjustments for smaller screens ... */
+    position: relative;
+  }
   
+  .about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity as needed */
+    z-index: -1;
+    animation: overlay-fade-in 2s ease-in-out forwards; /* Add fade-in animation */
+  }
+  
+  @keyframes overlay-fade-in {
+    from { opacity: 0; }
+    to { opacity: 0.3; /* Adjust final opacity as needed */ }
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .about::before {
+      background-color: rgba(0, 0, 0, 0.2); /* Slightly reduce opacity on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about::before {
+      background-color: rgba(0, 0, 0, 0.15); /* Further reduce opacity if needed */
+    }
+  }
+  
+h1{
+    padding-top: 70px;
+    font-size: 34px;
+    font-weight: 800;
+    color: #ef0cc2;
+}
+/* In your style.css file */
+/* In your style.css file */
+.cool-about-text {
+    padding-top: 20px;
+    opacity: 0; /* Initially hidden */
+    color: #000;
+    animation: reveal-text 5s linear forwards; /* 5 seconds duration */
+}
+  
+@keyframes reveal-text {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+    h1{
+        font-size: 28px;
+        font-weight: 400;
+    }
+    .cool-about-text {
+        justify-content: flex-start;
+        font-size: 14px;
+    }
+
+}
+
+/*---------Services Page---------------*/
+.services {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    text-align: center;
+    padding: 100px 0;
+    padding-top: 100px;
+    background-image: url("Images/lots.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+h2 {
+    padding-top: 70px;
+    font-size: 34px;
+    font-weight: 800;
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+.more-services-section {
+    margin-top: 30px;
+}
+
+.more-services-section h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.service-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service-card {
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    opacity: 0.5;
+}
+
+.service-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-card li {
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.services h3 {
+    color: #fff;
+}
+
+.more-services {
+    text-decoration: none;
+    color: #e8eaed;
+    font-weight: bold;
+}
+
+.service-card-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.service-card i {
+    font-size: 3rem;
+    margin-bottom: 5px;
+    color: #ef0cc2;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ef0cc2;
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    color: #020202;
+}
+
+/* Animations for slide-in effects */
+
+.service-card:nth-child(1) {
+    animation: slide-in-left 1s ease-in-out forwards;
+}
+
+.service-card:nth-child(2) {
+    animation: slide-in-right 1s ease-in-out forwards;
+}
+
+.service-card:nth-child(3) {
+    animation: slide-in-top 1s ease-in-out forwards;
+}
+
+@keyframes slide-in-left {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slide-in-right {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slide-in-top {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .service-card {
+        width: 45%; /* Adjust card width for larger screens */
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    h2{
+        font-size: large;
+        padding-top: 0;
+    }
+    .service-card {
+        font-size: xx-small;
+        width: 100%;
+    }
+    .more-services-section{
+        font-size: medium;
+        width: 100%;
+    }
+    .more-services{
+        padding-top: 0;
+        padding-bottom: 60px;
+    }
+}
+
+
+
+/*----------------Commitments--------------------*/
+.commitments {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    text-align: center;
+    padding: 100px 0;
+    padding-top: 100px;
+    background-size: 200%;
+    background-image: url("Images/grass.png"); /* Replace with your rose image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+  }
+  
+  .container {
+    max-width: 900px; /* Adjust for desired width */
+    margin: 0 auto;
+  }
+  
+  .heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .card-group {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 45%; /* Adjust for desired card width */
+    transition: transform 0.3s ease-in-out;
+  }
+  .card:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  ul {
+    list-style-type: none; /* Remove bullets */
+    margin-left: 0; /* Remove default list indentation */
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+  @media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .container {
+      max-width: none; /* Remove max-width for smaller screens */
+    }
+  
+    .card {
+      width: 100%; /* Full-width cards on smaller screens */
+      margin-bottom: 30px; /* Add more spacing between cards */
+    }
+    .heading{
+        font-size: 20px;
+    }
+  }
+  /*-----------------Contacts Page--------------------*/
+  .contact-section {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.map-container {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.2em;
+}
+
+.social-links a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff00ee;
+}
+
+/* Style the images (icons) */
+.social-links img {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Media query for smaller screens */
+.scroll-arrows {
+    position: fixed;
+    right: 10%; /* Position at the right side of the screen */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.scroll-arrows img {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-arrows img:hover {
+    opacity: 1;
+}
+
+.scroll-arrows .top {
+    top: 80px;
+}
+
+.scroll-arrows .bottom {
+    bottom: 50px;
+}
+
+/* Hide the arrows on larger screens */
+@media (min-width: 768px) {
+    .scroll-arrows {
+        display: none;
+    }
+}

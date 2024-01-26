@@ -5,20 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiama Beauty Clinic</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
+        <div class="hamburger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
+            <li><a href="#commitments">Commitments</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <section class="header">
+    <section class="header" id="home">
         <div class="background">
             <div class="glass-panel">
                 <div class="content">
@@ -30,5 +37,109 @@
             </div>
         </div>
     </section>
+    <!-----------------About----------------->
+    <section class="about" id="about">
+        <h1>About Kiama Beauty</h1>
+            <p class="cool-about-text">Hey lovelies! Welcome to Kiama Beauty our new clinic based in the beautiful City of Norwich U.K. Explore our stretch marks and scar tattoo camouflage hub for personalised beauty treatments. Our expert team offer tailored treatments customised to suit your skin concern priotising your needs and treating you as an individual. Beyond stretch marks and scar treatments we offer non cosmetic enhancements tailored to you.  Initial consultation  for all treatments will be offered free of charge, a booking fee will need to be paid should you wish to start your treatment. Patch tests will also be offered treatments that require this.</p>
+    </section>
+    <!--------------------Services--------------------->
+    <section class="services" id="services">
+        <h2>Kiama Beauty Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+              <i class="icon fa-solid fa-face-smile"></i> <h3>Stretch Marks & Scars Tattoo Camouflage (With Ink)</h3>
+              <p>
+                <li>An innovative treatment that works by tattooing customised ink that blends in with your skin colour <br> to make your marks or scars less visible. You will need a consultation to discuss what treatment would be suitable for your needs. <br> More than 1 session may be required for better results & each session is charged separately.</li>
+                <li>Please be aware that we require you to follow the pre-treatment and aftercare instructions on all treatments for better results.</li>
+                <li>Prices start from £200*. Small scars from £150</li>
+            </p>
+            </div>
+            <div class="service-card">
+              <i class="icon fa-solid fa-hands-holding-heart"></i> <h3>Inkless stretch marks and scars tattoo camouflage (MCA Needling)</h3>
+              <p>
+                <li>This method involves using tattoo machines and serums to carefully penetrate the skin and treat areas that need repairing. Minimal trauma is initiated to break down the scar tissue and stimulate collagen and elastin during healing process. <b>Please be aware that tattooing with ink may not be necessary, this will be discussed further during initial consultation.</b> </li>
+                <li>Price start from £200*. Small scars from £150*</li>
+            </p>
+            </div>
+            <a href="#more-services" class="more-services">View More Services</a>
+            </div>
+            </div>
+    </section>
+    <!----------------Commitments---------------------->
+    <section class="commitments" id="commitments">
+        <div class="container">
+          <h2 class="heading">Our Commitment to You</h2>
+          <div class="card-group">
+            <div class="card">
+              <p>
+                <ul>
+                  <li>All treatments are offered after a consultation to assess your suitability.</li>
+                  <li>Our commitment goes beyond camouflaging imperfections; it's about embracing your uniqueness.</li>
+                  <li>Welcome to a space where your uniqueness is honored and celebrated.</li>
+                </ul>
+              </p>
+            </div>
+            <div class="card">
+              <p>
+                <ul>
+                  <li>We'll never pressure you to book treatments.</li>
+                  <li>All our practices are safe and ethical, and treatments are never offered without assessment.</li>
+                  <li>We're up-to-date with immunizations and training.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!----------------------More services------------------------>
+      <section class="services">
+        <div class="more-services-section" id="more-services"></div>
+          <h3>More Services</h3>
+          <div class="service-grid">
+            <div class="service-card">
+                <ul>
+                    <li>£50 booking fee required</li>
+                    <li>Lip filler 0.5ml £90</li>
+                    <li>Lip filler 1.1ml £110</li>
+                    <li>Lip dissolve £100</li>
+                    <li>Skin booster £150</li>
+                </ul>
+              </div>
+            </div>
+        </div>
+      </section>
+      <!----------------------------Contacts-------------------------->
+      <section class="contact-section" id="contact">
+        <!-- Your Google Maps iframe -->
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2421.3954120086996!2d1.3428854256038365!3d52.63476887772747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d9e30c4ba0e7c7%3A0x18a93e0a43911c78!2sRing%20Rd%2C%20Norwich%20NR7%200XJ%2C%20UK!5e0!3m2!1sen!2ske!4v1706305057345!5m2!1sen!2ske" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    
+        <!-- Your social media links -->
+        <div class="social-links">
+            <a href="https://wa.me/447454006475" target="_blank"><img src="Images/whats.png" alt="WhatsApp"> WhatsApp</a>
+            <a href="mailto:kiamabeauty@outlook.com"><img src="Images/email.png" alt="Email"> Email</a>
+            <a href="https://www.instagram.com/kiama_beauty" target="_blank"><img src="Images/insta.png" alt="Instagram"> Instagram</a>
+        </div>
+    </section>
+    <div class="scroll-arrows">
+        <div class="scroll-arrows top" id="scroll-up">
+            <img src="Images/up.png" alt="Scroll Up" class="scroll-up">
+        </div>
+        <div class="scroll-arrows bottom" id="scroll-down">
+            <img src="Images/down.png" alt="Scroll Down" class="scroll-down">
+        </div>
+    </div>
+         
+      
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then((registration) => console.log('Service Worker registered with scope:', registration.scope))
+            .catch((error) => console.error('Error registering Service Worker:', error));
+        }
+      </script>
+      
 </body>
 </html>
