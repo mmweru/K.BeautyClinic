@@ -607,39 +607,3 @@ ul {
     margin-right: 5px;
     vertical-align: middle;
 }
-
-/* Media query for smaller screens */
-.scroll-arrows {
-    position: fixed;
-    right: 10%; /* Position at the right side of the screen */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.scroll-arrows img {
-    width: 50px; /* Adjust as needed */
-    height: 50px; /* Adjust as needed */
-    cursor: pointer;
-    opacity: 0.6;
-    transition: opacity 0.3s ease;
-}
-
-.scroll-arrows img:hover {
-    opacity: 1;
-}
-
-.scroll-arrows .top {
-    top: 80px;
-}
-
-.scroll-arrows .bottom {
-    bottom: 50px;
-}
-
-/* Hide the arrows on larger screens */
-@media (min-width: 768px) {
-    .scroll-arrows {
-        display: none;
-    }
-}
