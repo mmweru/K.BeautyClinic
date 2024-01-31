@@ -1,10 +1,19 @@
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const navLinks = document.querySelector('nav ul');
+const navItems = document.querySelectorAll('nav ul li a');
 
 hamburgerMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-    hamburgerMenu.classList.toggle('toggle');
+  navLinks.classList.toggle('show');
+  hamburgerMenu.classList.toggle('toggle');
 });
+
+navItems.forEach(item => {
+  item.addEventListener('click', () => {
+    navLinks.classList.remove('show'); // Close the menu
+    hamburgerMenu.classList.remove('toggle'); // Reset hamburger icon
+  });
+});
+
 
 
 const navLink = document.querySelectorAll('nav a[href^="#"]');
